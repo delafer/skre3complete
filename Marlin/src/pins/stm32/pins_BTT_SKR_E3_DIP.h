@@ -21,6 +21,8 @@
  */
 #pragma once
 
+//this is my marlin 5 korvin/delafer2000
+
 #ifndef TARGET_STM32F1
   #error "Oops! Select an STM32F1 board in 'Tools > Board.'"
 #endif
@@ -44,6 +46,8 @@
 //
 #define SERVO0_PIN         PA1
 
+#define PS_ON_PIN          PC2
+
 //
 // Limit Switches
 //
@@ -59,8 +63,12 @@
 //
 // Filament Runout Sensor
 //
+#ifdef FIL_RUNOUT_PIN
+  #undef FIL_RUNOUT_PIN   PC2
+#endif
+
 #ifndef FIL_RUNOUT_PIN
-  #define FIL_RUNOUT_PIN   PC2
+  //#define FIL_RUNOUT_PIN   PC2
 #endif
 
 //

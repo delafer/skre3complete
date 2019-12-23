@@ -78,7 +78,6 @@
 //
 #define SDSS               PA4
 #define LED_PIN            PD2
-#define PS_ON_PIN          PA10
 
 //
 // Heaters / Fans
