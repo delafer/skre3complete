@@ -1,0 +1,27 @@
+https://ru.aliexpress.com/item/32823353394.html
+
+
+#define USE_ZMIN_PLUG 
+#define USE_XMAX_PLUG
+#define USE_YMAX_PLUG
+#define USE_ZMAX_PLUG
+
+
+#define Z_MIN_PROBE_ENDSTOP_INVERTING false (true??)
+
+#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
+
+
+//#define Z_MIN_PROBE_ENDSTOP
+//#define Z_MIN_PROBE_PIN Z_MAX_PIN
+
+#define AUTO_BED_LEVELING_BILINEAR
+
+
+#define BLTOUCH
+
+check PROBE_OFFSET
+
+
+
+
