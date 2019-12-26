@@ -18,3 +18,30 @@ for i, flag in enumerate(env["LINKFLAGS"]):
         env["LINKFLAGS"][i] = "-Wl,-T" + custom_ld_script
     elif flag == "-T":
         env["LINKFLAGS"][i + 1] = custom_ld_script
+
+env.Append(
+    ARFLAGS=["rcs"],
+
+    ASFLAGS=["-x", "assembler-with-cpp"],
+
+    CCFLAGS=[
+        "-Wno-register",
+        "-fabi-version=0",
+        "-fno-use-cxa-atexit",
+        "-fno-threadsafe-statics",
+        "-ffast-math",
+        "-Wno-unused-const-variable",
+    ],
+    LINKFLAGS=[
+        "-Os",
+        "-march=armv7-m",
+        "-mcpu=cortex-m3",
+        "-mfix-cortex-m3-ldrd",
+        "-ffreestanding",
+        "-mthumb",
+        "--specs=nano.specs",
+        "--specs=nosys.specs",
+        "-u_printf_float",
+        "--enable-newlib-io-long-long",
+    ],
+)

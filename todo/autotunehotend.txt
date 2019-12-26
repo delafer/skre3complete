@@ -1,0 +1,36 @@
+>>> G28
+SENDING:G28
+>>> M106
+SENDING:M106
+>>> M303 E0 S220 C8
+SENDING:M303 E0 S220 C8
+PID Autotune start
+ bias: 102 d: 102 min: 218.28 max: 223.06
+ bias: 94 d: 94 min: 218.33 max: 222.06
+ bias: 95 d: 95 min: 218.28 max: 221.94 Ku: 66.16 Tu: 12.03
+ Classic PID
+ Kp: 39.70 Ki: 6.60 Kd: 59.68
+ bias: 94 d: 94 min: 218.18 max: 222.25 Ku: 58.77 Tu: 12.35
+ Classic PID
+ Kp: 35.26 Ki: 5.71 Kd: 54.42
+ bias: 97 d: 97 min: 218.23 max: 221.94 Ku: 66.61 Tu: 11.70
+ Classic PID
+ Kp: 39.97 Ki: 6.83 Kd: 58.47
+ bias: 97 d: 97 min: 218.65 max: 222.06 Ku: 72.30 Tu: 11.22
+ Classic PID
+ Kp: 43.38 Ki: 7.73 Kd: 60.86
+ bias: 93 d: 93 min: 219.11 max: 222.06 Ku: 80.34 Tu: 10.74
+ Classic PID
+ Kp: 48.20 Ki: 8.97 Kd: 64.73
+ bias: 93 d: 93 min: 218.96 max: 222.06 Ku: 76.29 Tu: 10.90
+ Classic PID
+ Kp: 45.78 Ki: 8.40 Kd: 62.39
+PID Autotune finished! Put the last Kp, Ki and Kd constants from below into Configuration.h
+#define DEFAULT_Kp 45.78
+#define DEFAULT_Ki 8.40
+#define DEFAULT_Kd 62.39
+>>> M301 P45.78 I8.40 D62.39
+SENDING:M301 P45.78 I8.40 D62.39
+echo: p:45.78 i:8.40 d:62.39
+>>> M500
+SENDING:M500

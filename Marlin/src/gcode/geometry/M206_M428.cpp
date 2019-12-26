@@ -65,6 +65,11 @@ void GcodeSuite::M428() {
 
   xyz_float_t diff;
   LOOP_XYZ(i) {
+    //SERIAL_ECHOLNPAIR(" ax:", i);
+    //SERIAL_ECHOLNPAIR(" bases:", (base_home_pos((AxisEnum)i)));
+    //SERIAL_ECHOLNPAIR(" curr:", current_position[i]);
+    //SERIAL_ECHOLNPAIR(" home:", (home_dir((AxisEnum)i)));
+
     diff[i] = base_home_pos((AxisEnum)i) - current_position[i];
     if (!WITHIN(diff[i], -20, 20) && home_dir((AxisEnum)i) > 0)
       diff[i] = -current_position[i];

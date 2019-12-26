@@ -1,0 +1,17 @@
+I have normal Ender cartesian printer and have configured 
+  #define MIN_PROBE_EDGE_LEFT 30
+  #define MIN_PROBE_EDGE_RIGHT 30
+ ... etc. bounds for bltouch/3dtouch probes.
+And  BILLINEAR_BED_LEVELING und also offset for my bl-touch
+ (NOZZLE_TO_PROBE_OFFSET { 29, 0, 0 })
+I am starting autohome and then starting M29 autolevelling and printer starts to measure grid from position 0, not e.G. 30 or something else. And at position 0, my censor is outside the BED plate.
+If I am defining 
+MIN_PROBE_EDGE_LEFT 50
+MIN_PROBE_EDGE_RIGHT 50
+the autoleveling starts measuring first point from position X = 20.. instead of 50..
+If I am setting EDGE to 60, thean from position 30...
+I don't understand this logic.. Is anybody who understands how it works?
+
+If I activate Z_SAFE_HOMING and then execute Z_SAFE_HOMING.. my head / nozzle with censor parking not in the center, but I the right part of my bed plate.
+I have tryed to understand the code.. and why this works so illogical and incomprehensible and failed trying to understand something in the code .. everything is very confusing
+

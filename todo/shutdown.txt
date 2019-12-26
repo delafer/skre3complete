@@ -1,0 +1,3 @@
+M400 ; wait for queue to be empty
+G4 S300 ; wait 300seconds 
+M84 ; disable steppers

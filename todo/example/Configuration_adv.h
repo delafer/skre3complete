@@ -1416,7 +1416,7 @@
 #define LIN_ADVANCE
 #if ENABLED(LIN_ADVANCE)
   //#define EXTRA_LIN_ADVANCE_K // Enable for second linear advance constants
-  #define LIN_ADVANCE_K 0.6     // Unit: mm compression per 1mm/s extruder speed
+  #define LIN_ADVANCE_K 0.22    // Unit: mm compression per 1mm/s extruder speed
   //#define LA_DEBUG            // If enabled, this will generate debug information output over USB.
 #endif
 
@@ -1453,18 +1453,18 @@
  */
 #undef IS_KINEMATIC
 #if PROBE_SELECTED && !IS_KINEMATIC
-  #define MIN_PROBE_EDGE_LEFT 21
-  #define MIN_PROBE_EDGE_RIGHT 0
-  #define MIN_PROBE_EDGE_FRONT 5
-  #define MIN_PROBE_EDGE_BACK 15
+  #define MIN_PROBE_EDGE_LEFT 30
+  #define MIN_PROBE_EDGE_RIGHT 30
+  #define MIN_PROBE_EDGE_FRONT 20
+  #define MIN_PROBE_EDGE_BACK 20
 #endif
 
 #if EITHER(MESH_BED_LEVELING, AUTO_BED_LEVELING_UBL)
   // Override the mesh area if the automatic (max) area is too large
-  #define MESH_MIN_X MESH_INSET
-  #define MESH_MIN_Y MESH_INSET
-  #define MESH_MAX_X X_BED_SIZE - (MESH_INSET)
-  #define MESH_MAX_Y Y_BED_SIZE - (MESH_INSET)
+  //#define MESH_MIN_X MESH_INSET
+  //#define MESH_MIN_Y MESH_INSET
+  //#define MESH_MAX_X X_BED_SIZE - (MESH_INSET)
+  //#define MESH_MAX_Y Y_BED_SIZE - (MESH_INSET)
 #endif
 
 /**
@@ -1728,7 +1728,7 @@
 #if ENABLED(ADVANCED_PAUSE_FEATURE)
   #define NOZZLE_PARK_X_POS 0                  // X position of hotend
   #define NOZZLE_PARK_Y_POS 0                  // Y position of hotend
-  #define NOZZLE_PARK_Z_ADD 10                 // Z addition of hotend (lift)
+  #define NOZZLE_PARK_Z_ADD 0                 // Z addition of hotend (lift)
   #define NOZZLE_PARK_XY_FEEDRATE 100          // X and Y axes feedrate in mm/s (also used for delta printers Z axis)
 
   #define NOZZLE_PARK_Z_FEEDRATE 5             // Z axis feedrate in mm/s (not used for delta printers)
